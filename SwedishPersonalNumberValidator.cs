@@ -106,7 +106,7 @@ namespace grupp_arbete
     int secondLastDigitIndex = personalNumber.Length - 2;  // Indexet för näst sista siffran.
     char secondLastDigitChar = personalNumber[secondLastDigitIndex];  // Hämtar näst sista siffran som en char.
     
-    return (secondLastDigitChar % 2 == '0') ? "Female" : "Male";
+    return (secondLastDigitChar % 2 == 0) ? "Female" : "Male";
 }
 
 

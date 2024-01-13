@@ -1,28 +1,34 @@
 namespace grupp_arbete.Tests
 {
     public class SwedishPersonalNumberValidatorTests
-     {
-/*      [Theory]
+    {
+        [Theory]
         [InlineData("011114-0414", true)]   // Korrekt format och kontrollsiffra
         [InlineData("0111140414", true)]    // Korrekt format
         [InlineData("850213456", false)]    // För kort
         [InlineData("850213456789", false)] // För lång
         [InlineData("2504251234", false)]   // Ogiltig ålder
-        [InlineData("200111140414", true)]  // Korrekt ålder
+       [InlineData("200111140414", true)]  // Korrekt ålder
         public void IsValid_ShouldReturnExpectedResult(string input, bool expectedResult)
         {
             bool result = SwedishPersonalNumberValidator.IsValid(input);
             Assert.Equal(expectedResult, result);
-        }
+        } 
 
         [Theory]
-        [InlineData("850213-4587", "Female")] // Jämnt antal = kvinna
-        [InlineData("8502134578", "Male")]    // Udda antal = man
+        [InlineData("19850213-4527", "Female")] // Jämnt antal = kvinna YYYYMMDD-XXXX
+        [InlineData("850213-4527", "Female")] // Jämnt antal = kvinna YYMMDD-XXXX
+        [InlineData("8502134527", "Female")] // Jämnt antal = kvinna YYMMDDXXXX
+        
+
+        [InlineData("19850213-4518", "Male")] // Udda antal = man
+        [InlineData("850213-4518", "Male")] // Udda antal = man
+        [InlineData("8502134518", "Male")] // Udda antal = man
         public void GetGender_ShouldReturnExpectedGender(string input, string expectedGender)
         {
             string result = SwedishPersonalNumberValidator.GetGender(input);
             Assert.Equal(expectedGender, result);
-        } */
+        }
 
         [Fact]
         public void IsValid_WithInvalidControlNumber_ShouldReturnFalse()
