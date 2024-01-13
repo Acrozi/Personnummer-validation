@@ -3,7 +3,7 @@ name: .NET Core CI
 on:
   push:
     branches:
-      - main  # eller huvudgrenen du vill använda
+      - main  # eller annat
       - Andreybranch
       - Niklasbranch
       - master
