@@ -63,13 +63,14 @@ public void GetGender_FemaleNumber_ShouldReturnFemale()
 }
 
 
-    [Fact]
-    public void GetGender_InvalidNumber_ShouldThrowArgumentException()
-    {
-        // Arrange
-        string invalidNumber = "1234567890";
+[Fact]
+public void GetGender_WithInvalidInput_ShouldThrowArgumentException()
+{
+    // Arrange
+    string invalidNumber = "3434234442";
 
-        // Act & Assert
-        Assert.Throws<ArgumentException>(() => SwedishPersonalNumberValidator.GetGender(invalidNumber));
-    }
+    // Act & Assert
+    Assert.Throws<ArgumentException>(() => SwedishPersonalNumberValidator.GetGender(invalidNumber));
+}
+
 }
