@@ -1,6 +1,6 @@
 class SwedishPersonalNumberValidator
 {
-    public static bool IsValidPersonalNumber(string personalNumber)
+    public static bool IsValid(string personalNumber)
     {
         // Ta bort bindestreck om de finns
         personalNumber = personalNumber.Replace("-", "");
@@ -42,7 +42,7 @@ class SwedishPersonalNumberValidator
         personalNumber = personalNumber.Replace("-", "");
 
         // Kontrollera om personnumret är giltigt innan du fortsätter
-        if (!IsValidPersonalNumber(personalNumber))
+        if (!IsValid(personalNumber))
         {
             throw new ArgumentException("Invalid personal identity number or gender", nameof(personalNumber));
         }

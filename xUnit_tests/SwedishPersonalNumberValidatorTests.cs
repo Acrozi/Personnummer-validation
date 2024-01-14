@@ -9,8 +9,8 @@ public class SwedishPersonalNumberValidatorTests
         string validNumber2 = "20011114-0414";
 
         // Act
-        bool result1 = SwedishPersonalNumberValidator.IsValidPersonalNumber(validNumber1);
-        bool result2 = SwedishPersonalNumberValidator.IsValidPersonalNumber(validNumber2);
+        bool result1 = SwedishPersonalNumberValidator.IsValid(validNumber1);
+        bool result2 = SwedishPersonalNumberValidator.IsValid(validNumber2);
 
         // Assert
         Assert.True(result1);
@@ -26,9 +26,9 @@ public class SwedishPersonalNumberValidatorTests
         string invalidNumber3 = "2001010d12345678";
 
         // Act
-        bool result1 = SwedishPersonalNumberValidator.IsValidPersonalNumber(invalidNumber1);
-        bool result2 = SwedishPersonalNumberValidator.IsValidPersonalNumber(invalidNumber2);
-        bool result3 = SwedishPersonalNumberValidator.IsValidPersonalNumber(invalidNumber3);
+        bool result1 = SwedishPersonalNumberValidator.IsValid(invalidNumber1);
+        bool result2 = SwedishPersonalNumberValidator.IsValid(invalidNumber2);
+        bool result3 = SwedishPersonalNumberValidator.IsValid(invalidNumber3);
 
         // Assert
         Assert.False(result1);
