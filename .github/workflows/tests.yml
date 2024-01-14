@@ -7,11 +7,11 @@ on:
       - Andreybranch
       - Niklasbranch
       - master
-  pull_request:
-    branches:
-    - main
-    - Andreybranch
-    - Niklasbranch
+ #pull_request:
+ #   branches:
+ #   - main
+ #   - Andreybranch
+ #   - Niklasbranch
 
 jobs:
   build:
