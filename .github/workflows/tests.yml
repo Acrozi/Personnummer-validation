@@ -1,17 +1,17 @@
 name: .NET Core CI
 
 on:
-  push:
+  pull_request:
     branches:
       - main  # eller annat
       - Andreybranch
       - Niklasbranch
       - master
-  pull_request:
-    branches:
-    - main
-    - Andreybranch
-    - Niklasbranch
+ #pull_request:
+ #   branches:
+ #   - main
+ #   - Andreybranch
+ #   - Niklasbranch
 
 jobs:
   build:
