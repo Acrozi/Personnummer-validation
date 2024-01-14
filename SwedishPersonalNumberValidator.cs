@@ -1,6 +1,4 @@
-using System;
-
-class PersonnummerValidator
+class SwedishPersonalNumberValidator
 {
     public static bool IsValidPersonalNumber(string personalNumber)
     {
