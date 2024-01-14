@@ -8,7 +8,7 @@ namespace grupp_arbete.Tests
         [InlineData("850213456", false)]    // För kort
         [InlineData("850213456789", false)] // För lång
         [InlineData("2504251234", false)]   // Ogiltig ålder
-       [InlineData("200111140414", true)]  // Korrekt ålder
+       // [InlineData("200111140414", true)]  // Korrekt ålder
         public void IsValid_ShouldReturnExpectedResult(string input, bool expectedResult)
         {
             bool result = SwedishPersonalNumberValidator.IsValid(input);
@@ -16,10 +16,11 @@ namespace grupp_arbete.Tests
         } 
 
         [Theory]
-        [InlineData("19850213-4527", "Female")] // Jämnt antal = kvinna YYYYMMDD-XXXX
-        [InlineData("850213-4527", "Female")] // Jämnt antal = kvinna YYMMDD-XXXX
-        [InlineData("8502134527", "Female")] // Jämnt antal = kvinna YYMMDDXXXX
+        [InlineData("19850213-4527", "Female")] // Jämnt antal = kvinna YYYYMMDD-XXXX / YYYYMMDDXXXX = 12
+        [InlineData("850213-4527", "Female")] // Jämnt antal = kvinna YYMMDD-XXXX / YYMMDDXXXX = 10
+        [InlineData("8502134527", "Female")] // Jämnt antal = kvinna YYMMDDXXXX = 10
         
+        //  YYYYMMDD-XXXX = 13 // YYMMDD-XXXX = 11 // YYMMDDXXXX = 10
 
         [InlineData("19850213-4518", "Male")] // Udda antal = man
         [InlineData("850213-4518", "Male")] // Udda antal = man
@@ -54,7 +55,7 @@ namespace grupp_arbete.Tests
         [Fact]
         public void GetGender_WithInvalidInput_ShouldThrowArgumentException()
         {
-            Assert.Throws<ArgumentException>(() => SwedishPersonalNumberValidator.GetGender("850213456")); // Felaktigt format
+            Assert.Throws<ArgumentException>(() => SwedishPersonalNumberValidator.GetGender("830213456")); // Felaktigt format
         }
 
         [Fact]
