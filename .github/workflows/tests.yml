@@ -1,7 +1,7 @@
 name: .NET Core CI
 
 on:
-  push:
+  pull_request:
     branches:
       - main  # eller annat
       - Andreybranch
