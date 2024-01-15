@@ -9,4 +9,4 @@ RUN dotnet build
 
 RUN dotnet test
 
-ENTRYPOINT ["dotnet", "SwedishPersonalNumberValidationTool.dll"]
+ENTRYPOINT ["dotnet", "PersonNummerValidationTool.dll"]
