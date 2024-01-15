@@ -1,7 +1,7 @@
 name: .NET Core CI
 
 on:
-  pull_request:
+  push:
     branches:
       - main  # eller annat
       - Andreybranch
@@ -24,7 +24,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '8.0.x'  # eller den version du vill använda
+        dotnet-version: '8.0.x'  
 
     - name: Restore dependencies
       run: dotnet restore
@@ -34,3 +34,6 @@ jobs:
 
     - name: Run Unit Tests
       run: dotnet test 
+
+
+      
