@@ -5,8 +5,8 @@ public class SwedishPersonalNumberValidatorTests
     public void IsValidPersonalNumber_ValidFormat_ShouldReturnTrue()
     {
         // Arrange
-        string validNumber1 = "011114-0414";
-        string validNumber2 = "20011114-0414";
+        string validNumber1 = "211018-7081";
+        string validNumber2 = "19211018-7081";
 
         // Act
         bool result1 = SwedishPersonalNumberValidator.IsValid(validNumber1);
@@ -67,7 +67,7 @@ public void GetGender_FemaleNumber_ShouldReturnFemale()
 public void GetGender_WithInvalidInput_ShouldThrowArgumentException()
 {
     // Arrange
-    string invalidNumber = "3434234442";
+    string invalidNumber = "3434442342";
 
     // Act & Assert
     Assert.Throws<ArgumentException>(() => SwedishPersonalNumberValidator.GetGender(invalidNumber));
