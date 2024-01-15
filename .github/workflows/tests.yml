@@ -3,15 +3,12 @@ name: .NET Core CI
 on:
   push:
     branches:
-      - main  # eller annat
-      - Andreybranch
-      - Niklasbranch
-      - master
- #pull_request:
- #   branches:
- #   - main
- #   - Andreybranch
- #   - Niklasbranch
+    - Andreybranch
+    - Niklasbranch
+  pull_request:
+    branches:
+    - Andreybranch
+    - Niklasbranch
 
 jobs:
   build:
@@ -35,5 +32,3 @@ jobs:
     - name: Run Unit Tests
       run: dotnet test 
 
-
-      
