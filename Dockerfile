@@ -18,9 +18,8 @@ RUN dotnet build -c Release -o /app/out
 FROM mcr.microsoft.com/dotnet/runtime:8.0
 WORKDIR /app
 
-COPY --from=build-env /app/out .
+COPY PersonNummerValidationTool/ .
 
-CMD ["dotnet", "PersonNummerValidationTool.dll"]
+RUN dotnet build -c Release -o /app/out
 
-
-# NEW CHANGES #
+CMD ["dotnet", "/app/out/PersonNummerValidationTool.dll"]
