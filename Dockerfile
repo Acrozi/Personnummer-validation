@@ -21,3 +21,6 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 CMD ["dotnet", "PersonNummerValidationTool.dll"]
+
+
+# NEW CHANGES
