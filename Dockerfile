@@ -1,19 +1,22 @@
-# Använd en officiell .NET SDK-bild som byggmiljö
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+# Använd den officiella .NET SDK-bilden som byggmiljö
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+
+# Ange arbetskatalogen
 WORKDIR /app
 
-# Kopiera projekt och restaurera beroenden
-COPY *.csproj ./
-RUN dotnet restore
-
-# Kopiera övrig kod och bygg applikationen
+# Kopiera hela projektinnehållet
 COPY . ./
-RUN dotnet publish -c Release -o out
 
-# Använd en mindre .NET runtime-bild för den slutgiltiga behållaren
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
-COPY --from=build-env /app/out .
+# Återställ beroenden och bygg hela projektet
+RUN dotnet restore
+RUN dotnet build
 
-# Ange kommandot att köra när behållaren startas
-ENTRYPOINT ["dotnet", "SwedishPersonalNumberValidator.dll"]
+# Kör enhetstester
+RUN dotnet test
+
+# Ange hur din applikation ska startas
+# Om du vill använda CMD:
+# CMD ["dotnet", "run"]
+
+# Om du vill använda ENTRYPOINT (rekommenderat för produktionsmiljöer):
+ENTRYPOINT ["dotnet", "SwedishPersonalNumberValidationTool.dll"]
