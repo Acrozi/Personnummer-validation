@@ -3,15 +3,17 @@ name: Docker Publish Application
 on:
   push:
     branches:
-      - main  # eller annat
-      - Andreybranch
-      - Niklasbranch
-      - master
- #pull_request:
- #   branches:
- #   - main
- #   - Andreybranch
- #   - Niklasbranch
+    - Andreybranch
+    - Niklasbranch
+    - jirjis
+    - heithum
+
+  pull_request:
+    branches:
+    - Andreybranch
+    - Niklasbranch
+    - jirjis
+    - heithum
 
 jobs:
   build:
