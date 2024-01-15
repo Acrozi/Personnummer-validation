@@ -5,10 +5,15 @@ on:
     branches:
     - Andreybranch
     - Niklasbranch
+    - jirjis
+    - heithum
+
   pull_request:
     branches:
     - Andreybranch
     - Niklasbranch
+    - jirjis
+    - heithum
 
 jobs:
   build:
