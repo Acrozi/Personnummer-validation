@@ -1,5 +1,5 @@
 # Använd den officiella .NET SDK-bilden som byggmiljö
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 
 # Ange arbetskatalogen
 WORKDIR /app
