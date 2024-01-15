@@ -15,7 +15,7 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     bash
     git clone https://github.com/Acrozi/Personnummer-validation.git
 
-
+gg
 
 Här börjar vi :)
 hej
