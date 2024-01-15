@@ -17,4 +17,4 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 
 # Ange entrypoint
-CMD ["dotnet", "PersonNummerValidationTool.dll"]
+ENTRYPOINT ["dotnet", "PersonNummerValidationTool.dll"]
