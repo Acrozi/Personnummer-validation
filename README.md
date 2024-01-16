@@ -34,6 +34,9 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     Följ instruktionerna som visas i konsolen för att ange ett svenskt personnummer och se resultatet av verifieringen.
 
 
+7. # Kör enhetstester:
+    bash
+    dotnet test
 
 
 
