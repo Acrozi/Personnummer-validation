@@ -3,12 +3,11 @@ name: .NET Core CI
 on:
   push:
     branches:
-    - Andreybranch
-    - Niklasbranch
+    - '*'
+
   pull_request:
     branches:
-    - Andreybranch
-    - Niklasbranch
+    - '*'
 
 jobs:
   build:
