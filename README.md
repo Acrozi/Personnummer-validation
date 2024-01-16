@@ -130,6 +130,6 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 ```
 test
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+https://github.com/Acrozi/Personnummer-validation/actions/workflows/WORKFLOW-FILE/badge.svg
 
 
