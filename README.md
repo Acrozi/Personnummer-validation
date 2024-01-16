@@ -131,7 +131,8 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 ```
 ## Collaborators
 
-![Stars](https://github.com/acrozi/Personnummer-validation/stargazers)
+[![Stars](https://img.shields.io/github/stars/acrozi/Personnummer-validation.svg)](https://github.com/acrozi/Personnummer-validation/stargazers)
+
 
 test
 
