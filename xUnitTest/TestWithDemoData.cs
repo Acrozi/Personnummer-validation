@@ -5,7 +5,7 @@ public class SwedishPersonalNumberValidatorTests
     public void IsValidPersonalNumber_ValidFormat_ShouldReturnTrue()
     {
         // Arrange
-        string validNumber1 = "211048-7081";
+        string validNumber1 = "211018-7081";
         string validNumber2 = "19211018-7081";
 
         // Act
