@@ -20,7 +20,7 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     bash
     cd Personnummer-validation
 
-
+3. # Öppna projektet i din C#-utvecklingsmiljö t.ex., Visual Studio eller VS Code.
 
 
 
