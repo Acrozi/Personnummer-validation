@@ -129,7 +129,11 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
         return checksum;
     }
 ```
-test
+## Collaborators
+
+![Stars](https://github.com/acrozi/Personnummer-validation/stargazers)
+
+
 
 
 
