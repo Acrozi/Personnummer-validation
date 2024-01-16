@@ -55,3 +55,17 @@ public static bool IsValid(string personalNumber)
             personalNumber = personalNumber.Substring(2, 10);
         } 
 
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
