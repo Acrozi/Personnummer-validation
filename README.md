@@ -38,7 +38,7 @@ Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respekt
 
 Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
 
-För att kontrollera detta använder vi funktionen IsValid:
+För att kontrollera detta använder vi funktionen `IsValid`:
 
 ```csharp
     public static bool IsValid(string personalNumber)
@@ -102,9 +102,10 @@ Detta kontrollerar vi genom funktionen `GetGender`:
 ```
 Personnummer kan beräknas för att se om det är äkta. Detta görs genom att man multiplicerar de 9 första siffrorna med omväxlande 2 och 1.
 De respektive siffersummorna adderas. Om man adderar kontrollsiffran(sista siffran) till denna summa skall man få ett tal jämt delbart med 10.
-Detta kontrollerar vi genom funktionen ´CalculateChecksum´:
+Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 
-´´´csharp
+
+```csharp
         static int CalculateChecksum(string number)
     {
         int sum = 0;
@@ -126,7 +127,7 @@ Detta kontrollerar vi genom funktionen ´CalculateChecksum´:
 
         return checksum;
     }
-´´´
+```
 test
 
 
