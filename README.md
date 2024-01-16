@@ -80,3 +80,878 @@ För att kontrollera detta använder vi funktionen IsValid:
 }
     Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kontrolleras genom att dela den nionde siffran med två.
 
+
+
+
+    test
+
+
+    Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
+Systemebet, som var det första i världen som omfattade ett lands hela befolkning.
+
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
+Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
+
+För att kontrollera detta använder vi funktionen IsValid:
+
+
+{
+// public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
+        // Check if the length is correct
+        if (personalNumber.Length != 10)
+        {
+            return false;
+        }
+
+        // Extract the birthdate part based on the format
+        string birthdatePart = personalNumber.Substring(0, 6);
+
+        // Extract the serial number part
+        string serialNumberPart = personalNumber.Substring(personalNumber.Length - 4, 3);
+
+        // Extract the checksum
+        int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+}
+
+
+Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kan kontrolleras genom att se om den nionde sif
+
+
