@@ -100,8 +100,34 @@ Detta kontrollerar vi genom funktionen `GetGender`:
         return (secondToLastDigit % 2 == 0) ? "Female" : "Male";
     }
 ```
-testing
+Personnummer kan beräknas för att se om det är äkta. Detta görs genom att man multiplicerar de 9 första siffrorna med omväxlande 2 och 1.
+De respektive siffersummorna adderas. Om man adderar kontrollsiffran(sista siffran) till denna summa skall man få ett tal jämt delbart med 10.
+Detta kontrollerar vi genom funktionen ´CalculateChecksum´:
 
+´´´csharp
+        static int CalculateChecksum(string number)
+    {
+        int sum = 0;
+
+        // Multiply each digit by 2 for odd positions
+        for (int i = 0; i < number.Length; i++)
+        {
+            int digit = int.Parse(number[i].ToString());
+            int multiplier = (i % 2 == 0) ? 2 : 1;
+
+            int product = digit * multiplier;
+
+            // Add the digits of the product
+            sum += product / 10 + product % 10;
+        }
+
+        // Calculate the checksum
+        int checksum = (10 - (sum % 10)) % 10;
+
+        return checksum;
+    }
+´´´
+test
 
 
 
