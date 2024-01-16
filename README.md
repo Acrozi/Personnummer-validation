@@ -43,6 +43,11 @@ Se resultaten av enhet testerna för att säkerställa korrekt funktionalitet.
 
 ## Körning med Docker
 
+För att köra applikationen med Docker, följ stegen nedan:
+
+
+
+
 
 
 
