@@ -166,3 +166,13 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
   <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
 </a>
 
+## Svenska Regler för Personnummer
+
+Svenska personnummer följer ett specifikt format och har regler för att bestämma dess giltighet. 
+Applikationen genomför kontroller för att säkerställa att personnumret är korrekt. 
+
+## Övrig Information
+
+För ytterligare detaljer och användning, se dokumentationen i källkoden och README.md-filen i GitHub.
+
+Lycka till med användningen av personnummerkontroll applikationen!  
