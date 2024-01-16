@@ -130,20 +130,14 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
     }
 ```
 ## Collaborators
-
-[![Stars](https://img.shields.io/github/stars/acrozi/Personnummer-validation.svg)](https://github.com/acrozi/Personnummer-validation/stargazers)
-
-[![Followers](https://img.shields.io/github/followers/niklasallard1.svg?style=social)](https://github.com/niklasallard1)
-
-
-[![niklasallard1](https://github.com/niklasallard1.png?s=60)](https://github.com/niklasallard1)
-
-test
-
-
-
 <a href="https://github.com/niklasallard1">
   <img src="https://github.com/niklasallard1.png" alt="niklasallard1" width="60" height="60">
+</a> <a href="https://github.com/acrozi">
+  <img src="https://github.com/acrozi.png" alt="acrozi" width="60" height="60">
+</a><a href="https://github.com/jirjis77">
+  <img src="https://github.com/jirjis77.png" alt="jirjis77" width="60" height="60">
+</a><a href="https://github.com/Heithum123">
+  <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
 </a>
 
 
