@@ -76,10 +76,9 @@ För att kontrollera detta använder vi funktionen IsValid:
         // Check if the calculated checksum matches the provided checksum
         return checksum == calculatedChecksum;
     }
-```
-    Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna, jämn siffra för kvinnor och udda siffra för män.
 
-    Detta kontrollerar vi genom funktionen GetGender:
+Genom att kontrollera den nionde siffran i personnumret kan vi avgöra om personen är en man eller en kvinna, jämn siffra för kvinnor och udda siffra för män. 
+Detta kontrollerar vi genom funktionen `GetGender`:
 
     
 ```csharp
@@ -100,7 +99,7 @@ För att kontrollera detta använder vi funktionen IsValid:
         // Avgör kön baserat på den näst sista siffran
         return (secondToLastDigit % 2 == 0) ? "Female" : "Male";
     }
-```
+
 
 
 
