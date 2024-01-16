@@ -32,16 +32,15 @@ Niklas del
 
 ## Personnummer
 
-Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
-Systemet, som var det första i världen som omfattade ett lands hela befolkning, infördes 1 januari 1947.
+Personnummer är ett nummer som Skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter. Systemet, som var det första i världen som omfattade ett lands hela befolkning, infördes 1 januari 1947.
 
-Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
-Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. Grupperna är åtskilda med ett skiljetecken, normalt ett bindestreck (-).
 
 Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
 
 För att kontrollera detta använder vi funktionen IsValid:
-```
+
+```csharp
     public static bool IsValid(string personalNumber)
     {
         // Ta bort bindestreck om de finns
@@ -77,13 +76,13 @@ För att kontrollera detta använder vi funktionen IsValid:
         // Check if the calculated checksum matches the provided checksum
         return checksum == calculatedChecksum;
     }
-
+```
     Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna, jämn siffra för kvinnor och udda siffra för män.
 
     Detta kontrollerar vi genom funktionen GetGender:
 
     
-
+```csharp
        public static string GetGender(string personalNumber)
     {
         // Ta bort eventuella bindestreck
@@ -101,6 +100,7 @@ För att kontrollera detta använder vi funktionen IsValid:
         // Avgör kön baserat på den näst sista siffran
         return (secondToLastDigit % 2 == 0) ? "Female" : "Male";
     }
+```
 
 
 
