@@ -138,6 +138,20 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 
 [<img src="https://github.com/niklasallard1.png" width="60px;"/><br /><sub><a href="https://github.com/niklasallard1">niklasallard1</a></sub>]
 
+
+<style>
+  .rounded-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+</style>
+
+<div class="rounded-image">
+  <img src="https://github.com/niklasallard1.png" alt="niklasallard1">
+</div>
+
 test
 
 
