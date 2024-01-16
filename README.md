@@ -39,6 +39,9 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     dotnet test
 
 
+Se resultaten av enhet testerna för att säkerställa korrekt funktionalitet.
+
+## Körning med Docker
 
 
 
