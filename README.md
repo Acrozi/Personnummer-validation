@@ -42,3 +42,16 @@ Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 
 
 För att kontrollera detta använder vi funktionen IsValid:
 
+//
+
+public static bool IsValid(string personalNumber)
+    {
+        // Ta bort bindestreck om de finns
+        personalNumber = personalNumber.Replace("-", "");
+
+       // Konvertera 12-siffrigt format till 10-siffrigt format
+        if (personalNumber.Length == 12)
+        {
+            personalNumber = personalNumber.Substring(2, 10);
+        } 
+
