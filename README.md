@@ -1,4 +1,4 @@
-![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
+                         ![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
 # To-do
 
 # Personnummer Verification Console Application
@@ -140,7 +140,3 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
   <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
 </a>
 
-
-
-
-[![Heithum123](https://img.shields.io/badge/Heithum123-Profile-blue?style=for-the-badge&logo=github)](https://github.com/Heithum123)
