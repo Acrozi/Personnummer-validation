@@ -13,3 +13,4 @@ COPY --from=build-env /app/out .
 
 ENTRYPOINT ["dotnet", "PersonNummerValidationTool.dll"]
 
+#update
