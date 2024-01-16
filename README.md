@@ -83,7 +83,7 @@ För att kontrollera detta använder vi funktionen IsValid:
     Detta kontrollerar vi genom funktionen GetGender:
 
     
-```
+
        public static string GetGender(string personalNumber)
     {
         // Ta bort eventuella bindestreck
