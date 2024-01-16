@@ -47,7 +47,10 @@ För att köra applikationen med Docker, så måste du kunna lära dig dom olika
 Att först köra med docker container så måste man ha installerat docker på sin dator, efteråt hämtar man en docker image med hjälp av att öppna terminaler eller kommandoprompt. Man hämtar docker image med hjälp av att använda "docker pull"
 Här är OPTIONS för de olika alternativen som kan användas med docker exec-kommandot, CONTAINER är namnet eller ID på behållaren där kommandot ska köras, COMMAND är kommandot som ska köras och ARG är argumentet. passerade att ge order till kommandot.
 
-1. Öppna någon terminal där du kan skriva in de olika kommandon
+1. Öppna någon terminal där du kan skriva in de olika kommandon.
+
+2. Först så tar man ner den till datorn genom: docker pull acrozi/personnummer_validation-docker (tar nån minut att ladda ned alla filer)
+
 
 Test
 
