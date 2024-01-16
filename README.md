@@ -42,9 +42,7 @@ Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 
 
 För att kontrollera detta använder vi funktionen IsValid:
 
-//
-
-public static bool IsValid(string personalNumber)
+// public static bool IsValid(string personalNumber)
     {
         // Ta bort bindestreck om de finns
         personalNumber = personalNumber.Replace("-", "");
@@ -79,5 +77,3 @@ public static bool IsValid(string personalNumber)
         // Check if the calculated checksum matches the provided checksum
         return checksum == calculatedChecksum;
     }
-
-//
