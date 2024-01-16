@@ -44,7 +44,7 @@ Se resultaten av enhet testerna för att säkerställa korrekt funktionalitet.
 ## Körning med Docker
 
 För att köra applikationen med Docker, så måste du kunna lära dig dom olika alternativ som finns,
-
+Att först köra med docker container så måste 
 Här är OPTIONS för de olika alternativen som kan användas med docker exec-kommandot, CONTAINER är namnet eller ID på behållaren där kommandot ska köras, COMMAND är kommandot som ska köras och ARG är argumentet. passerade att ge order till kommandot.
 
 
