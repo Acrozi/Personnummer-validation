@@ -133,6 +133,7 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 
 [![Stars](https://img.shields.io/github/stars/acrozi/Personnummer-validation.svg)](https://github.com/acrozi/Personnummer-validation/stargazers)
 
+[![Followers](https://img.shields.io/github/followers/niklasallard1.svg?style=social)](https://github.com/niklasallard1)
 
 test
 
