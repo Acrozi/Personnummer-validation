@@ -22,6 +22,9 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
 
 3. # Öppna projektet i din C#-utvecklingsmiljö t.ex., Visual Studio eller VS Code.
 
+4. # Bygg projektet:
+    bash
+    dotnet build
 
 
 
