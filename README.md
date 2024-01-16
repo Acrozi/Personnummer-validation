@@ -141,3 +141,6 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 </a>
 
 
+
+
+[![Heithum123](https://img.shields.io/badge/Heithum123-Profile-blue?style=for-the-badge&logo=github)](https://github.com/Heithum123)
