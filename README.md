@@ -1,3 +1,6 @@
+![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)
+
+![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
 # To-do
 
 # Personnummer Verification Console Application
@@ -130,6 +133,6 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 ```
 test
 
-https://github.com/Acrozi/Personnummer-validation/actions/workflows/WORKFLOW-FILE/badge.svg
+
 
 
