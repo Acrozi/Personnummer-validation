@@ -51,7 +51,7 @@ Här är OPTIONS för de olika alternativen som kan användas med docker exec-ko
 
 2. Först så tar man ner den till datorn genom: docker pull acrozi/personnummer_validation-docker (tar nån minut att ladda ned alla filer)
 
-
+3. hej
 Test
 
 
