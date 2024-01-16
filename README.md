@@ -2,7 +2,7 @@
 
 # Personnummer Verification Console Application
 
-## Introduktion
+### Introduktion
 
 Det här projektet är en C#-baserad konsolapplikation för att verifiera svenska personnummer. 
 Nedan finner du dokumentation om hur du kan köra och testa applikationen både lokalt och genom att använda Docker-container.
@@ -15,17 +15,19 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     bash
     git clone https://github.com/Acrozi/Personnummer-validation.git
 
-gg
 
-Här börjar vi :)
-hej
-# zZZZ
-hejj
 
-heithum är här
 
-Niklas testar
 
-Niklas testar igen
 
-Niklas testar actions
+
+
+
+
+
+
+######################################################################################################################################
+Niklas del
+
+###Personnummer
+
