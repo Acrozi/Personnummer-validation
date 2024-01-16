@@ -69,3 +69,15 @@ public static bool IsValid(string personalNumber)
 
         // Extract the checksum
         int checksum = int.Parse(personalNumber.Substring(personalNumber.Length - 1, 1));
+
+        // Concatenate the birthdate and serial number for checksum calculation
+        string fullNumberForChecksum = birthdatePart + serialNumberPart;
+
+        // Calculate the checksum
+        int calculatedChecksum = CalculateChecksum(fullNumberForChecksum);
+
+        // Check if the calculated checksum matches the provided checksum
+        return checksum == calculatedChecksum;
+    }
+
+//
