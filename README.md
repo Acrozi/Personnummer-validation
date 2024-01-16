@@ -35,3 +35,6 @@ Niklas del
 Personnummer är ett nummer som skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter.
 Systemet, som var det första i världen som omfattade ett lands hela befolkning, infördes 1 januari 1947.
 
+Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respektive 4 siffror. 
+Grupperna är åtskiljda med ett skiljetecken, normalt ett bindestreck (-).
+
