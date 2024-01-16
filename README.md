@@ -78,7 +78,31 @@ För att kontrollera detta använder vi funktionen IsValid:
         return checksum == calculatedChecksum;
     }
 }
-    Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna. Detta kontrolleras genom att dela den nionde siffran med två.
+    Genom att kontrollera den nionde siffran i personnummret kan vi avgöra om personen är en man eller en kvinna, jämn siffra för kvinnor och udda siffra för män.
+
+    Detta kontrollerar vi genom funktionen GetGender:
+
+    {
+
+       public static string GetGender(string personalNumber)
+    {
+        // Ta bort eventuella bindestreck
+        personalNumber = personalNumber.Replace("-", "");
+
+        // Kontrollera om personnumret är giltigt innan du fortsätter
+        if (!IsValid(personalNumber))
+        {
+            throw new ArgumentException("Invalid personal identity number or gender", nameof(personalNumber));
+        }
+
+        // Hämta den näst sista siffran (index 8 för 10-siffrigt format)
+        char secondToLastDigit = personalNumber[personalNumber.Length - 2];
+
+        // Avgör kön baserat på den näst sista siffran
+        return (secondToLastDigit % 2 == 0) ? "Female" : "Male";
+    }
+
+    }
 
 
 
