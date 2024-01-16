@@ -12,9 +12,14 @@ Nedan finner du dokumentation om hur du kan köra och testa applikationen både 
 
 För att köra och testa applikationen lokalt, följ stegen nedan:
 
-1. **Klona projektet från GitHub:**
+1. ## Klona projektet från GitHub:
     bash
     git clone https://github.com/Acrozi/Personnummer-validation.git
+
+2. # Navigera till projektmappen:
+    bash
+    cd Personnummer-validation
+
 
 
 
