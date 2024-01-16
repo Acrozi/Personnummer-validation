@@ -30,6 +30,10 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     bash
     dotnet run
 
+6. # Använd applikationen för att verifiera personnummer:
+    Följ instruktionerna som visas i konsolen för att ange ett svenskt personnummer och se resultatet av verifieringen.
+
+
 
 
 
