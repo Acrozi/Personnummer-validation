@@ -135,6 +135,9 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 
 [![Followers](https://img.shields.io/github/followers/niklasallard1.svg?style=social)](https://github.com/niklasallard1)
 
+
+[<img src="https://github.com/niklasallard1.png" width="60px;"/><br /><sub><a href="https://github.com/niklasallard1">niklasallard1</a></sub>](https://github.com/niklasallard1/Personnummer-validation)
+
 test
 
 
