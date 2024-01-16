@@ -26,6 +26,9 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
     bash
     dotnet build
 
+5. # Kör applikationen:
+    bash
+    dotnet run
 
 
 
