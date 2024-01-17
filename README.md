@@ -168,8 +168,3 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
   <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
 </a>
 
-<<<<<<< HEAD
-heithum är här
-heithumm
-=======
->>>>>>> 99d6b6c3b045f9fcd2f3f91749fd70826fc7a9e3
