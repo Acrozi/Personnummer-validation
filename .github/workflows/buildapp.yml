@@ -3,7 +3,7 @@ name: Build C# Program .EXE
 on:
   push:
     branches:
-      - main
+      - '*'
 
 jobs:
   build:
