@@ -44,8 +44,8 @@ jobs:
         name: Published
         path: publish
 
-    - name: Create Downloaded Artifact Directory
-      run: mkdir -p downloaded-artifact
+    - name: List contents of the downloaded-artifact directory
+      run: ls -R downloaded-artifact
 
     - name: Download EXE
       uses: actions/download-artifact@v2
