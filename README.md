@@ -168,3 +168,8 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
   <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
 </a>
 
+
+
+<a href="https://github.com/niklasallard1">
+  <img src="https://github.com/niklasallard1.png" alt="niklasallard1" width="60" height="60" style="border-radius:50%;">
+</a>
