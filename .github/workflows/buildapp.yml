@@ -1,4 +1,4 @@
-name: Build and Publish .exe
+name: Build and Archive
 
 on:
   pull_request:
@@ -18,11 +18,11 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Build and Publish .exe
+    - name: Build and Publish PersonNummerValidationTool
       run: dotnet publish -c Release -o publish PersonNummerValidationTool/PersonNummerValidationTool.csproj
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
       with:
-        name: Published
-        path: publish/PersonNummerValidationTool/**/*.exe
+        name: Released
+        path: publish/**/*.exe
