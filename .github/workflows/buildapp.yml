@@ -25,16 +25,18 @@ jobs:
       run: |
        dotnet restore --runtime win-x64
        dotnet publish -c Release -o publish-temp/PersonNummerValidationTool --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64 PersonNummerValidationTool/PersonNummerValidationTool.csproj
-      working-directory: PersonNummerValidationTool
+       
+    - name: List generated files
+      run: ls -R publish-temp/PersonNummerValidationTool
 
     - name: Create Target Directory
       run: mkdir -p publish
-
+ 
     - name: Move EXE to Target Directory
-      run: mv publish-temp/PersonNummerValidationTool/*.exe publish/
-
-    - name: List generated files
-      run: ls -R publish-temp/PersonNummerValidationTool
+      run: |
+        ls -l publish-temp/PersonNummerValidationTool  # Lägg till detta för att se vilka filer som finns där
+        mv publish-temp/PersonNummerValidationTool/*.exe publish/
+    
 
     - name: Remove Temporary Publish Directory
       run: rm -rf publish-temp
@@ -44,10 +46,3 @@ jobs:
       with:
         name: Published
         path: publish/*.exe
-
-    - name: Use Published Artifact
-      run: |
-        echo "Downloading Published Artifact..."
-        curl -O -L ${{ steps.upload.outputs.artifactUrl }}
-        unzip Published.zip
-        ./PersonNummerValidationTool.exe  # Run your executable
