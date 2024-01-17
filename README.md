@@ -168,12 +168,6 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
     }
 ```
 ## Collaborators
-<a href="https://github.com/niklasallard1">
-  <img src="https://github.com/niklasallard1.png" alt="niklasallard1" width="60" height="60">
-</a> <a href="https://github.com/acrozi">
-  <img src="https://github.com/acrozi.png" alt="acrozi" width="60" height="60">
-</a><a href="https://github.com/jirjis77">
-  <img src="https://github.com/jirjis77.png" alt="jirjis77" width="60" height="60">
-</a><a href="https://github.com/Heithum123">
-  <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
+<a href="https://github.com/Acrozi/Personnummer-validation/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
 </a>
