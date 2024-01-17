@@ -18,11 +18,19 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
+    - name: Create Temporary Publish Directory
+      run: mkdir -p publish-temp
+
     - name: Build and Publish
       run: |
         dotnet restore --runtime win-x64
-        dotnet publish -c Release -o publish --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64
+        dotnet publish -c Release -o publish-temp/PersonNummerValidationTool --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64
       working-directory: PersonNummerValidationTool
+
+    - name: Move EXE to Target Directory
+      run: mv publish-temp/PersonNummerValidationTool/*.exe publish/
+    - name: Remove Temporary Publish Directory
+      run: rm -rf publish-temp
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
