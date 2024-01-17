@@ -26,6 +26,8 @@ jobs:
        dotnet restore --runtime win-x64
        dotnet publish -c Release -o publish-temp/PersonNummerValidationTool --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64
        ls -R publish-temp/PersonNummerValidationTool
+       echo "Contents of publish-temp directory:"
+       ls -R publish-temp
 
     - name: Create Target Directory
       run: mkdir -p publish
