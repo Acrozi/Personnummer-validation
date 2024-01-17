@@ -57,8 +57,6 @@ Här är OPTIONS för de olika alternativen som kan användas med docker exec-ko
 
 4. För att köra container används kommando: docker run -it image-name (i vårt fall acrozi/personnummer_validation-docker) - detta startar en docker container med vår image i interactive mode för att kunna göra en input
 
-Testa gärna alla de här steg så att det fungerar på er dator och sedan kan ni inkludera detta i READ.me filen.
-
 När ni kör programmet borde ni få en promt där ni skriver en personnummer som programmet sedan validerar.
 
 
