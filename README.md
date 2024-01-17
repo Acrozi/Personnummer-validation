@@ -55,6 +55,8 @@ Här är OPTIONS för de olika alternativen som kan användas med docker exec-ko
 
 3. Sedan kör man kommano: docker images för att se vad har image för namn
 
+4. För att köra container används kommando: docker run -it image-name (i vårt fall acrozi/personnummer_validation-docker) - detta startar en docker container med vår image i interactive mode för att kunna göra en input
+
 
 
 
