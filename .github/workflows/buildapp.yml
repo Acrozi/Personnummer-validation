@@ -18,28 +18,14 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Create Temporary Publish Directory
-      run: mkdir -p publish-temp
-
     - name: Build and Publish
       run: |
-       dotnet restore --runtime win-x64
-       dotnet publish -c Release -o publish-temp/PersonNummerValidationTool --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64 PersonNummerValidationTool/PersonNummerValidationTool.csproj
-       
+        dotnet restore --runtime win-x64
+        dotnet publish -c Release -o publish --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64 PersonNummerValidationTool/PersonNummerValidationTool.csproj
+      working-directory: PersonNummerValidationTool
+
     - name: List generated files
-      run: ls -R publish-temp/PersonNummerValidationTool
-
-    - name: Create Target Directory
-      run: mkdir -p publish
- 
-    - name: Move EXE to Target Directory
-      run: |
-        ls -l publish-temp/PersonNummerValidationTool  # Lägg till detta för att se vilka filer som finns där
-        mv publish-temp/PersonNummerValidationTool/*.exe publish/
-    
-
-    - name: Remove Temporary Publish Directory
-      run: rm -rf publish-temp
+      run: ls -R publish
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
