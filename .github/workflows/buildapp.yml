@@ -18,16 +18,11 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Create Publish Directory
-      run: mkdir publish
-
-    - name: Build and Publish
-      run: |
-        dotnet build -c Release
-        dotnet publish -c Release publish/
+    - name: Build and Publish .exe
+      run: dotnet publish -c Release -o publish PersonNummerValidationTool/PersonNummerValidationTool.csproj
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
       with:
         name: Published
-        path: publish/*.exe
+        path: publish/PersonNummerValidationTool/**/*.exe
