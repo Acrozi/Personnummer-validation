@@ -3,7 +3,7 @@ name: Build and Publish .exe
 on:
   pull_request:
     branches:
-      - main
+      - '*'
 
 jobs:
   build:
