@@ -24,7 +24,7 @@ jobs:
     - name: Build and Publish
       run: |
         dotnet build -c Release
-        dotnet publish -c Release -o publish/
+        dotnet publish -c Release publish/
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
