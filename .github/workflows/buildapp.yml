@@ -41,3 +41,6 @@ jobs:
       with:
         name: Published
         path: publish/*.exe
+
+    - name: List generated files
+      run: ls -R publish-temp/PersonNummerValidationTool
