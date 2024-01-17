@@ -59,14 +59,6 @@ Här är OPTIONS för de olika alternativen som kan användas med docker exec-ko
 
 När ni kör programmet borde ni få en promt där ni skriver en personnummer som programmet sedan validerar.
 
-
-
-
-
-###########################################################################################
-
-Niklas del
-
 ## Personnummer
 
 Personnummer är ett nummer som Skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter. Systemet, som var det första i världen som omfattade ett lands hela befolkning, infördes 1 januari 1947.
