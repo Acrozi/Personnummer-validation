@@ -9,4 +9,8 @@
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
 </PropertyGroup>
 
+<PropertyGroup>
+    <OutputPath>publish\</OutputPath>
+</PropertyGroup>
+
 </Project>
