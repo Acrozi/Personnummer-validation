@@ -18,19 +18,32 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Prepare Directory
-      run: mkdir publish
-      working-directory: PersonNummerValidationTool
-
     - name: Build and Publish
       run: |
-        dotnet restore
-        dotnet build -c Release
-        dotnet publish -c Release -o publish
-      working-directory: PersonNummerValidationTool/
+        dotnet restore --runtime win-x64
+        dotnet publish -c Release -o publish --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64 PersonNummerValidationTool/PersonNummerValidationTool.csproj
+
+    - name: List generated files
+      run: ls -R publish
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
       with:
         name: Published
-        path: PersonNummerValidationTool/publish/**/*.exe
+        path: publish/*.exe
+
+
+    - name: Create Downloaded Artifact Directory
+      run: mkdir -p downloaded-artifact
+      
+    - name: Download EXE
+      uses: actions/download-artifact@v2
+      with:
+        name: Published
+        path: downloaded-artifact
+
+        
+  #  - name: Build and Publish
+  #  run: |
+  #   dotnet restore --runtime win-x64
+  #   dotnet publish -c Release -o publish-temp/PersonNummerValidationTool --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64 PersonNummerValidationTool/PersonNummerValidationTool.csproj
