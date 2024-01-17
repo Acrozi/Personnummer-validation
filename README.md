@@ -12,34 +12,33 @@ Nedan finner du dokumentation om hur du kan köra och testa applikationen både 
 
 För att köra och testa applikationen lokalt, följ stegen nedan:
 
-1. ## Klona projektet från GitHub:
+1. Klona projektet från GitHub:
     bash
     git clone https://github.com/Acrozi/Personnummer-validation.git
 
-2. # Navigera till projektmappen:
+2. Navigera till projektmappen:
     bash
     cd Personnummer-validation
 
-3. # Öppna projektet i din C#-utvecklingsmiljö t.ex., Visual Studio eller VS Code.
+3. Öppna projektet i din C#-utvecklingsmiljö t.ex., Visual Studio eller VS Code.
 
-4. # Bygg projektet:
+4. Bygg projektet:
     bash
     dotnet build
 
-5. # Kör applikationen:
+5. Kör applikationen:
     bash
     dotnet run
 
-6. # Använd applikationen för att verifiera personnummer:
+6. Använd applikationen för att verifiera personnummer:
     Följ instruktionerna som visas i konsolen för att ange ett svenskt personnummer och se resultatet av verifieringen.
 
 
-7. # Kör enhetstester:
+7. Kör enhetstester:
     bash
     dotnet test
 
-
-Se resultaten av enhet testerna för att säkerställa korrekt funktionalitet.
+Se resultaten av enhets testerna för att säkerställa korrekt funktionalitet.
 
 ## Körning med Docker
 
