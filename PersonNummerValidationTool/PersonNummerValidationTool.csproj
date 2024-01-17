@@ -6,7 +6,7 @@
     <UseRidGraph>true</UseRidGraph>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <RuntimeIdentifier>win11-x64</RuntimeIdentifier>
 </PropertyGroup>
 
 </Project>

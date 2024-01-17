@@ -1,9 +1,9 @@
-name: Build C# Program .exe
+name: Build and Publish .exe
 
 on:
-  push:
+  pull_request:
     branches:
-      - '*'
+      - main
 
 jobs:
   build:
@@ -23,19 +23,8 @@ jobs:
         dotnet build -c Release
         dotnet publish -c Release -o publish/
 
-    - name: Create Temp Directory
-      run: mkdir temp
-
-    - name: Copy .exe to Temp Directory
-      run: cp publish/*.exe temp/
-
-    - name: Remove Unnecessary Files
-      run: |
-        cd temp
-        find . -type f ! -name "*.exe" -delete
-
     - name: Upload EXE
       uses: actions/upload-artifact@v2
       with:
         name: Published
-        path: temp/
+        path: publish/*.exe
