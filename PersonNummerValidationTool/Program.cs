@@ -1,10 +1,12 @@
-﻿using System;
-
-class StartProgram
+﻿class StartProgram
 {
     static void Main()
     {
-        Start();
+        do
+        {
+            Start();
+            Console.WriteLine("Do you want to check another personal identity number? (y/n)");
+        } while (Console.ReadLine()?.Trim().ToLower() == "y");
     }
 
     static void Start()
