@@ -51,8 +51,10 @@ Här är OPTIONS för de olika alternativen som kan användas med docker exec-ko
 
 1. Öppna någon terminal där du kan skriva in de olika kommandon.
 
+2. Först så tar man ner den till datorn genom: docker pull acrozi/personnummer_validation-docker (tar nån minut att ladda ned alla filer)
 
-testt
+
+
 
 
 
