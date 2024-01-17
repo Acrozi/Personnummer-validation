@@ -53,6 +53,8 @@ Här är OPTIONS för de olika alternativen som kan användas med docker exec-ko
 
 2. Först så tar man ner den till datorn genom: docker pull acrozi/personnummer_validation-docker (tar nån minut att ladda ned alla filer)
 
+3. Sedan kör man kommano: docker images för att se vad har image för namn
+
 
 
 
