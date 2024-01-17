@@ -22,7 +22,7 @@ jobs:
       run: |
         dotnet restore --runtime win-x64
         dotnet publish -c Release -o PersonNummerValidationTool/publish publish --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true --runtime win-x64
-        working-directory: PersonNummerValidationTool
+        working-directory: . PersonNummerValidationTool
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
