@@ -1,4 +1,4 @@
-name: Build C# Program
+name: Build C# Program .EXE
 
 on:
   push:
