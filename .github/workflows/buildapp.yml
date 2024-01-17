@@ -30,9 +30,13 @@ jobs:
     - name: Create Target Directory
       run: mkdir -p publish
  
-
+      
     - name: Move EXE to Target Directory
       run: mv publish-temp/PersonNummerValidationTool/*.exe publish/
+
+    - name: List generated files
+      run: ls -R publish-temp/PersonNummerValidationTool
+
     - name: Remove Temporary Publish Directory
       run: rm -rf publish-temp
 
@@ -42,5 +46,4 @@ jobs:
         name: Published
         path: publish/*.exe
 
-    - name: List generated files
-      run: ls -R publish-temp/PersonNummerValidationTool
+
