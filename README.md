@@ -48,11 +48,11 @@ Att först köra med docker container så måste man ha installerat docker på s
 Här är OPTIONS för de olika alternativen som kan användas med docker exec-kommandot, CONTAINER är namnet eller ID på behållaren där kommandot ska köras, COMMAND är kommandot som ska köras och ARG är argumentet. passerade att ge order till kommandot.
 
 
+
 1. Öppna någon terminal där du kan skriva in de olika kommandon.
 
 
-
-
+testt
 
 
 
@@ -169,9 +169,3 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
 </a><a href="https://github.com/Heithum123">
   <img src="https://github.com/Heithum123.png" alt="Heithum123" width="60" height="60">
 </a>
-
-<<<<<<< HEAD
-heithum är här
-heithumm
-=======
->>>>>>> 99d6b6c3b045f9fcd2f3f91749fd70826fc7a9e3
