@@ -1,7 +1,7 @@
 name: Build C# Program .EXE
 
 on:
-  push:
+  pull_request:
     branches:
       - '*'
 
@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Published .exe
-        path: bin/Release/netcoreapp3.1/win10-x64/publish/
+        path: bin/Release/net8.0/win10-x64/publish/
