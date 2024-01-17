@@ -1,4 +1,4 @@
-name: Build and Archive
+name: Build and Publish
 
 on:
   pull_request:
@@ -18,11 +18,19 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Build and Publish PersonNummerValidationTool
-      run: dotnet publish -c Release -o publish PersonNummerValidationTool/PersonNummerValidationTool.csproj
+    - name: Prepare Directory
+      run: mkdir publish
+      working-directory: PersonNummerValidationTool
+
+    - name: Build and Publish
+      run: |
+        dotnet restore
+        dotnet build -c Release
+        dotnet publish -c Release -o publish
+      working-directory: PersonNummerValidationTool/
 
     - name: Upload EXE
       uses: actions/upload-artifact@v2
       with:
-        name: Released
-        path: publish/**/*.exe
+        name: Published
+        path: PersonNummerValidationTool/publish/**/*.exe
