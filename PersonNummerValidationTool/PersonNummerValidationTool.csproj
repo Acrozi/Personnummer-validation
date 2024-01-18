@@ -13,4 +13,8 @@
     <OutputPath>publish\</OutputPath>
 </PropertyGroup>
 
+  <ItemGroup>
+    <UsingDirective>global using Xunit;</UsingDirective>
+  </ItemGroup>
+
 </Project>

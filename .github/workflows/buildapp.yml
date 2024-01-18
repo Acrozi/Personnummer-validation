@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - '*'
-  push:
-    branches:
-      - '*'
 
 jobs:
   build:
@@ -53,5 +50,5 @@ jobs:
     - name: Download EXE
       uses: actions/download-artifact@v2
       with:
-        name: Published
+        name: Archivw with .exe file
         path: downloaded-artifact

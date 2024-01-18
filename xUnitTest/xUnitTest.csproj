@@ -24,8 +24,8 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
+<!--  <ItemGroup>
     <ProjectReference Include="..\PersonNummerValidationTool\PersonNummerValidationTool.csproj" />
-  </ItemGroup>
+  </ItemGroup> -->
 
 </Project>
