@@ -1,5 +1,10 @@
 ![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
-# To-do
+<div align="center">
+
+![Workflow build](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)
+![Workflow test](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
+
+</div>
 
 # Personnummer Verification Console Application
 
