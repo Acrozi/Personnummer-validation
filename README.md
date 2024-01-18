@@ -1,7 +1,14 @@
-![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
-# To-do
+<div align="center">
 
-# Personnummer Verification Console Application
+![Workflow build](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)
+![Workflow test](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
+
+</div>
+
+<div align="center">
+  <h1>Personnummer Verification Console Application</h1>
+</div>
+
 
 ## Introduktion
 
@@ -14,21 +21,21 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
 
 1. Klona projektet från GitHub:
     bash
-    git clone https://github.com/Acrozi/Personnummer-validation.git
+    `git clone https://github.com/Acrozi/Personnummer-validation.git`
 
 2. Navigera till projektmappen:
     bash
-    cd Personnummer-validation
+    `cd Personnummer-validation`
 
 3. Öppna projektet i din C#-utvecklingsmiljö t.ex., Visual Studio eller VS Code.
 
 4. Bygg projektet:
     bash
-    dotnet build
+    `dotnet build`
 
 5. Kör applikationen:
     bash
-    dotnet run
+    `dotnet run`
 
 6. Använd applikationen för att verifiera personnummer:
     Följ instruktionerna som visas i konsolen för att ange ett svenskt personnummer och se resultatet av verifieringen.
@@ -36,27 +43,53 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
 
 7. Kör enhetstester:
     bash
-    dotnet test
+    `dotnet test`
 
-Se resultaten av enhets testerna för att säkerställa korrekt funktionalitet.
+Se resultaten av enhetstesterna för att säkerställa korrekt funktionalitet.
 
 ## Körning med Docker
 
-För att köra applikationen med Docker, så måste du kunna lära dig dom olika alternativ som finns,
-Att först köra med docker container så måste man ha installerat docker på sin dator, efteråt hämtar man en docker image med hjälp av att öppna terminaler eller kommandoprompt. Man hämtar docker image med hjälp av att använda "docker pull"
-Här är OPTIONS för de olika alternativen som kan användas med docker exec-kommandot, CONTAINER är namnet eller ID på behållaren där kommandot ska köras, COMMAND är kommandot som ska köras och ARG är argumentet. passerade att ge order till kommandot.
+För att korrekt installera och köra programmet "Personnummer Validation" via Docker, följ dessa steg:
+
+1. Se till att Docker är korrekt installerat och att Docker Desktop körs. Kontrollera att Docker Daemon är igång. (https://www.docker.com/products/docker-desktop/)
+
+2. Använd kommandot `docker pull acrozi/personnummer_validation-docker` för att hämta Docker-bilden från Docker Hub och ladda ner den lokalt.
+
+3. Använd kommandot `docker images` för att visa en lista över alla lokalt sparade Docker-images. Kontrollera att `acrozi/personnummer_validation-docker` finns i listan.
+
+4. Använd kommandot `docker run acrozi/personnummer_validation-docker` för att köra programmet i en Docker-container. För Windows-användare som använder en terminal som stöder interaktivt läge kan du använda kommandot utan winpty. Om du har problem med det, prova med  kommandot `winpty docker run -it acrozi/personnummer_validation-docker`. Kommandot `-it` möjliggör att vi kan köra programmet interaktivt vilket gör att vi kan mata in data.
+
+5. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
 
 
+## Körning med .EXE
 
-1. Öppna någon terminal där du kan skriva in de olika kommandon.
+Via github actions skapas ett körbart program.
 
-2. Först så tar man ner den till datorn genom: docker pull acrozi/personnummer_validation-docker (tar nån minut att ladda ned alla filer)
+1. Gå in på webbsidan https://github.com/Acrozi/Personnummer-validation/actions/runs/7568751620/artifacts/1177793540. Ladda hem zip-filen.
 
-3. Sedan kör man kommando: docker images för att se vad har image för namn
+2. Packa upp zip-filen och kör programmet.
 
-4. För att köra container används kommando: docker run -it image-name (i vårt fall acrozi/personnummer_validation-docker) - detta startar en docker container med vår image i interactive mode för att kunna göra en input
+3. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
 
-När ni kör programmet borde ni få en promt där ni skriver en personnummer som programmet sedan validerar.
+## Enhetstester
+
+För att säkerställa korrekt funktionalitet har enhetstester skapats med hjälp av xUnit-ramverket. Några av de testade scenarierna inkluderar:
+
+1. Validering av personnummer med korrekt format.
+
+2. Ogiltiga personnummer i olika format som förväntas returnera false.
+
+3. Hämtning av könet baserat på näst sista siffran i giltiga personnummer.
+
+4. Kastning av ArgumentException vid försök att hämta kön från ett ogiltigt personnummer.
+
+5. Projektstruktur:
+
+Projektet innehåller två projekt
+
+PersonNummerValidationTool: Huvudprojektet som innehåller kodfilen SwedishPersonalNumberValidator.cs.
+xUnitTest: Projektet som innehåller xUnit-testerna för att validera koden
 
 ## Personnummer
 
@@ -66,7 +99,7 @@ Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respekt
 
 Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
 
-För att kontrollera detta använder vi funktionen `IsValid`:
+För att kontrollera detta använder programmet funktionen `IsValid`:
 
 ```csharp
     public static bool IsValid(string personalNumber)
@@ -106,7 +139,7 @@ För att kontrollera detta använder vi funktionen `IsValid`:
     }
 ```
 Genom att kontrollera den nionde siffran i personnumret kan vi avgöra om personen är en man eller en kvinna, jämn siffra för kvinnor och udda siffra för män. 
-Detta kontrollerar vi genom funktionen `GetGender`:
+Detta kontrollerar programmet genom funktionen `GetGender`:
 
     
 ```csharp
@@ -130,7 +163,7 @@ Detta kontrollerar vi genom funktionen `GetGender`:
 ```
 Personnummer kan beräknas för att se om det är äkta. Detta görs genom att man multiplicerar de 9 första siffrorna med omväxlande 2 och 1.
 De respektive siffersummorna adderas. Om man adderar kontrollsiffran(sista siffran) till denna summa skall man få ett tal jämt delbart med 10.
-Detta kontrollerar vi genom funktionen `CalculateChecksum`:
+Detta kontrollerar programmet genom funktionen `CalculateChecksum`:
 
 
 ```csharp
@@ -156,7 +189,10 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
         return checksum;
     }
 ```
-## Collaborators
-<a href="https://github.com/Acrozi/Personnummer-validation/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
-</a>
+
+<div align="center">
+  <h2>Collaborators</h2>
+  <a href="https://github.com/Acrozi/Personnummer-validation/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
+  </a>
+</div>
