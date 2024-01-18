@@ -66,9 +66,9 @@ För att korrekt installera och köra programmet "Personnummer Validation" via D
 
 Via github actions skapas ett körbart program.
 
-1. Gå in på webbsidan https://github.com/Acrozi/Personnummer-validation/actions/runs/7568751620/artifacts/1177793540. Ladda hem zip-filen.
+1. Gå in på webbsidan https://github.com/Acrozi/Personnummer-validation/actions/runs/7572835865/artifacts/1178651670
 
-2. Packa upp zip-filen och kör programmet.
+2. Ladda ned och packa upp zip-filen och kör programmet.
 
 3. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
 
