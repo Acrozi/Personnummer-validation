@@ -1,4 +1,3 @@
-![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)![example workflow](https://github.com/Acrozi/Personnummer-validation/actions/workflows/tests.yml/badge.svg)
 <div align="center">
 
 ![Workflow build](https://github.com/Acrozi/Personnummer-validation/actions/workflows/docker.yml/badge.svg)
@@ -188,6 +187,12 @@ Detta kontrollerar programmet genom funktionen `CalculateChecksum`:
     }
 ```
 
+<div align="center">
+  <h2>Collaborators</h2>
+  <a href="https://github.com/Acrozi/Personnummer-validation/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
+  </a>
+</div>
 
 
 ## Collaborators
