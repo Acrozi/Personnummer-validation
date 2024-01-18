@@ -9,6 +9,7 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <AdditionalUsings>global using Xunit;</AdditionalUsings>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PersonNummerValidationTool\PersonNummerValidationTool.csproj" />
-  </ItemGroup>
+  </ItemGroup> 
 
 </Project>

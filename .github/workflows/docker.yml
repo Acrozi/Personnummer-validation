@@ -1,13 +1,13 @@
 name: Docker Publish Application
 
 on:
-  #push:
-    #branches:
-    #- '*'
-
-  pull_request:
+  push:
     branches:
     - '*'
+
+  #pull_request:
+    #branches:
+    #- '*'
 
 jobs:
   build:

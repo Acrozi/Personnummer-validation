@@ -1,0 +1,57 @@
+name: Build and Publish
+
+on:
+  #pull_request:
+    #branches:
+      #- '*'
+  push:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Create Temporary Publish Directory
+      run: mkdir -p publish-temp
+
+    - name: Build and Publish
+      run: |
+        dotnet restore --runtime win-x64
+        dotnet publish -c Release -o publish-temp/PersonNummerValidationTool --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseAppHost=true --runtime win-x64 PersonNummerValidationTool/PersonNummerValidationTool.csproj
+
+    - name: Create Target Directory
+      run: mkdir -p publish
+
+    - name: Move EXE to Target Directory
+      run: mv publish-temp/PersonNummerValidationTool/*.exe publish/
+
+    - name: List generated files
+      run: ls -R publish-temp/PersonNummerValidationTool
+
+    - name: Remove Temporary Publish Directory
+      run: rm -rf publish-temp
+
+    - name: Upload EXE
+      uses: actions/upload-artifact@v2
+      with:
+        name: .ZIP-acrhive 
+        path: publish
+
+    - name: Create Downloaded Artifact Directory
+      run: mkdir -p downloaded-artifact
+
+    - name: Download EXE
+      uses: actions/download-artifact@v2
+      with:
+        name: .ZIP-acrhive 
+        path: downloaded-artifact
