@@ -55,6 +55,16 @@ För att korrekt installera och köra programmet "Personnummer Validation" via D
 5. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
 
 
+## Körning med .EXE
+
+Via github actions skapas ett körbart program.
+
+1. Gå in på webbsidan `https://github.com/Acrozi/Personnummer-validation/actions/runs/7568751620/artifacts/1177793540`. Ladda hem zip-filen.
+
+2. Packa upp zip-filen och kör programmet.
+
+3. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
+
 ## Personnummer
 
 Personnummer är ett nummer som Skatteverket tilldelar personer folkbokförda i Sverige för att identifiera dem hos bland annat myndigheter. Systemet, som var det första i världen som omfattade ett lands hela befolkning, infördes 1 januari 1947.
