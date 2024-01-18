@@ -14,21 +14,21 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
 
 1. Klona projektet från GitHub:
     bash
-    git clone https://github.com/Acrozi/Personnummer-validation.git
+    `git clone https://github.com/Acrozi/Personnummer-validation.git`
 
 2. Navigera till projektmappen:
     bash
-    cd Personnummer-validation
+    `cd Personnummer-validation`
 
 3. Öppna projektet i din C#-utvecklingsmiljö t.ex., Visual Studio eller VS Code.
 
 4. Bygg projektet:
     bash
-    dotnet build
+    `dotnet build`
 
 5. Kör applikationen:
     bash
-    dotnet run
+    `dotnet run`
 
 6. Använd applikationen för att verifiera personnummer:
     Följ instruktionerna som visas i konsolen för att ange ett svenskt personnummer och se resultatet av verifieringen.
@@ -36,27 +36,24 @@ För att köra och testa applikationen lokalt, följ stegen nedan:
 
 7. Kör enhetstester:
     bash
-    dotnet test
+    `dotnet test`
 
-Se resultaten av enhets testerna för att säkerställa korrekt funktionalitet.
+Se resultaten av enhetstesterna för att säkerställa korrekt funktionalitet.
 
 ## Körning med Docker
 
-För att köra applikationen med Docker, så måste du kunna lära dig dom olika alternativ som finns,
-Att först köra med docker container så måste man ha installerat docker på sin dator, efteråt hämtar man en docker image med hjälp av att öppna terminaler eller kommandoprompt. Man hämtar docker image med hjälp av att använda "docker pull"
-Här är OPTIONS för de olika alternativen som kan användas med docker exec-kommandot, CONTAINER är namnet eller ID på behållaren där kommandot ska köras, COMMAND är kommandot som ska köras och ARG är argumentet. passerade att ge order till kommandot.
+För att korrekt installera och köra programmet "Personnummer Validation" via Docker, följ dessa steg:
 
+1. Se till att Docker är korrekt installerat och att Docker Desktop körs. Kontrollera att Docker Daemon är igång. (https://www.docker.com/products/docker-desktop/)
 
+2. Använd kommandot `docker pull acrozi/personnummer_validation-docker` för att hämta Docker-bilden från Docker Hub och ladda ner den lokalt.
 
-1. Öppna någon terminal där du kan skriva in de olika kommandon.
+3. Använd kommandot `docker images` för att visa en lista över alla lokalt sparade Docker-images. Kontrollera att `acrozi/personnummer_validation-docker` finns i listan.
 
-2. Först så tar man ner den till datorn genom: docker pull acrozi/personnummer_validation-docker (tar nån minut att ladda ned alla filer)
+4. Använd kommandot `docker run acrozi/personnummer_validation-docker` för att köra programmet i en Docker-container. För Windows-användare som använder en terminal som stöder interaktivt läge kan du använda kommandot utan winpty. Om du har problem med det, prova med  kommandot `winpty docker run -it acrozi/personnummer_validation-docker`. Kommandot `-it` möjliggör att vi kan köra programmet interaktivt vilket gör att vi kan mata in data.
 
-3. Sedan kör man kommando: docker images för att se vad har image för namn
+5. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
 
-4. För att köra container används kommando: docker run -it image-name (i vårt fall acrozi/personnummer_validation-docker) - detta startar en docker container med vår image i interactive mode för att kunna göra en input
-
-När ni kör programmet borde ni få en promt där ni skriver en personnummer som programmet sedan validerar.
 
 ## Personnummer
 
