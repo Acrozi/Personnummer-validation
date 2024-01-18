@@ -59,11 +59,30 @@ För att korrekt installera och köra programmet "Personnummer Validation" via D
 
 Via github actions skapas ett körbart program.
 
-1. Gå in på webbsidan `https://github.com/Acrozi/Personnummer-validation/actions/runs/7568751620/artifacts/1177793540`. Ladda hem zip-filen.
+1. Gå in på webbsidan https://github.com/Acrozi/Personnummer-validation/actions/runs/7568751620/artifacts/1177793540. Ladda hem zip-filen.
 
 2. Packa upp zip-filen och kör programmet.
 
 3. Följ instruktionerna i terminalen för att interagera med programmet. Ange personnummer när det efterfrågas.
+
+## Enhetstester
+
+För att säkerställa korrekt funktionalitet har enhetstester skapats med hjälp av xUnit-ramverket. Några av de testade scenarierna inkluderar:
+
+1. Validering av personnummer med korrekt format.
+
+2. Ogiltiga personnummer i olika format som förväntas returnera false.
+
+3. Hämtning av könet baserat på näst sista siffran i giltiga personnummer.
+
+4. Kastning av ArgumentException vid försök att hämta kön från ett ogiltigt personnummer.
+
+5. Projektstruktur:
+
+Projektet innehåller två projekt
+
+PersonNummerValidationTool: Huvudprojektet som innehåller kodfilen SwedishPersonalNumberValidator.cs.
+xUnitTest: Projektet som innehåller xUnit-testerna för att validera koden
 
 ## Personnummer
 
@@ -73,7 +92,7 @@ Ett personnummer är uppbyggt av 10 siffror indelade i två grupper om 6 respekt
 
 Ett personnummer kan matas in på olika sätt, bland annat genom 12 siffror, 10 siffror med bindestreck eller 10 siffror utan bindestreck.
 
-För att kontrollera detta använder vi funktionen `IsValid`:
+För att kontrollera detta använder programmet funktionen `IsValid`:
 
 ```csharp
     public static bool IsValid(string personalNumber)
@@ -113,7 +132,7 @@ För att kontrollera detta använder vi funktionen `IsValid`:
     }
 ```
 Genom att kontrollera den nionde siffran i personnumret kan vi avgöra om personen är en man eller en kvinna, jämn siffra för kvinnor och udda siffra för män. 
-Detta kontrollerar vi genom funktionen `GetGender`:
+Detta kontrollerar programmet genom funktionen `GetGender`:
 
     
 ```csharp
@@ -137,7 +156,7 @@ Detta kontrollerar vi genom funktionen `GetGender`:
 ```
 Personnummer kan beräknas för att se om det är äkta. Detta görs genom att man multiplicerar de 9 första siffrorna med omväxlande 2 och 1.
 De respektive siffersummorna adderas. Om man adderar kontrollsiffran(sista siffran) till denna summa skall man få ett tal jämt delbart med 10.
-Detta kontrollerar vi genom funktionen `CalculateChecksum`:
+Detta kontrollerar programmet genom funktionen `CalculateChecksum`:
 
 
 ```csharp
@@ -163,6 +182,9 @@ Detta kontrollerar vi genom funktionen `CalculateChecksum`:
         return checksum;
     }
 ```
+
+
+
 ## Collaborators
 <a href="https://github.com/Acrozi/Personnummer-validation/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
