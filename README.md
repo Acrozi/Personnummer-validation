@@ -196,7 +196,6 @@ Svenska personnummer följer ett specifikt format och har regler för att bestä
 ## Övrig Information
 
 För ytterligare detaljer och användning, se dokumentationen i källkoden och README.md filen i GitHub.
-
 Lycka till med användningen av personnummerkontroll applikationen!
 
 <div align="center">
