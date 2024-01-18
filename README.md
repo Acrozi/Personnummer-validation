@@ -189,6 +189,15 @@ Detta kontrollerar programmet genom funktionen `CalculateChecksum`:
         return checksum;
     }
 ```
+## Svenska Regler för Personnummer
+
+Svenska personnummer följer ett specifikt format och har regler för att bestämma dess giltighet. Applikationen genomför kontroller för att säkerställa att personnumret är korrekt enligt dessa regler. 
+
+## Övrig Information
+
+För ytterligare detaljer och användning, se dokumentationen i källkoden och README.md filen i GitHub.
+
+Lycka till med användningen av personnummerkontroll applikationen!
 
 <div align="center">
   <h2>Collaborators</h2>
