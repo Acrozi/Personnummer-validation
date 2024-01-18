@@ -44,7 +44,7 @@ jobs:
     - name: Upload EXE
       uses: actions/upload-artifact@v2
       with:
-        name: Published
+        name: .ZIP-acrhive 
         path: publish
 
     - name: Create Downloaded Artifact Directory
@@ -53,5 +53,5 @@ jobs:
     - name: Download EXE
       uses: actions/download-artifact@v2
       with:
-        name: Archivw with .exe file
+        name: .ZIP-acrhive 
         path: downloaded-artifact
