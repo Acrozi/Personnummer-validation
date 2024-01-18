@@ -5,7 +5,10 @@
 
 </div>
 
-# Personnummer Verification Console Application
+<div align="center">
+  <h1>Personnummer Verification Console Application</h1>
+</div>
+
 
 ## Introduktion
 
@@ -193,9 +196,3 @@ Detta kontrollerar programmet genom funktionen `CalculateChecksum`:
     <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
   </a>
 </div>
-
-
-## Collaborators
-<a href="https://github.com/Acrozi/Personnummer-validation/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
-</a>
