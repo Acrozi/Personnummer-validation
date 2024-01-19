@@ -205,11 +205,12 @@ Lycka till med användningen av personnummerkontroll applikationen!
   </a>
 </div>
 
-<a href="https://github.com/jaywcjlove">
-  <img src="https://avatars.githubusercontent.com/u/78901279?v=4" width="50" alt="Andrey M" style="border-radius: 50%;">
+<a href="https://github.com/Acrozi">
+  <img src="https://avatars.githubusercontent.com/u/78901279?v=4" width="50" alt="Andrey M" style="border-radius: 25%;">
 </a>
 
-<a href="https://github.com/github-actions[bot]">
-  <img src="https://avatars.githubusercontent.com/u/143690578?v=4" width="50" alt="Niklas A" style="border-radius: 50%;">
+<a href="https://github.com/Acrozi">
+  <img src="https://avatars.githubusercontent.com/u/143690578?v=4" width="50" alt="Niklas A" style="border-radius: 25%;">
 </a>
+
 
