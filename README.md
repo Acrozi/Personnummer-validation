@@ -204,3 +204,10 @@ Lycka till med användningen av personnummerkontroll applikationen!
     <img src="https://contrib.rocks/image?repo=Acrozi/Personnummer-validation" />
   </a>
 </div>
+
+<a href="https://github.com/Acrozi">
+  <img src="https://avatars.githubusercontent.com/u/78901279?v=4" width="36;" alt="jaywcjlove"/>
+</a>
+<a href="https://github.com/NiklasAllard1">
+  <img src="https://avatars.githubusercontent.com/u/143690578?v=4" width="36;" alt="github-actions[bot]"/>
+</a
